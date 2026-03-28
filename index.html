@@ -4,6 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Light Heritage Logistics Inc. — Canada & Nigeria Shipping</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Light Heritage Logistics Inc. — Licensed air and ocean freighters offering sea cargo shipping between Canada and Nigeria. Services include warehousing, freight forwarding, and customs clearance." />
+  <meta name="keywords" content="shipping Canada to Nigeria, Nigeria to Canada cargo, sea cargo shipping, freight forwarding Canada Nigeria, Lagos shipping, Kitchener Nigeria shipping, barrels drums shipping, international shipping Canada, customs clearance Nigeria, Light Heritage Logistics" />
+  <meta name="author" content="Light Heritage Logistics Inc." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lightheritagelogistics.netlify.app/" />
+
+  <!-- Open Graph (WhatsApp, Facebook, LinkedIn previews) -->
+  <meta property="og:title" content="Light Heritage Logistics Inc. — Canada & Nigeria Shipping" />
+  <meta property="og:description" content="Licensed air and ocean freighters. We ship cars, barrels, electronics, food items and more between Canada and Nigeria. Fast, affordable & secure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lightheritagelogistics.netlify.app/" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Light Heritage Logistics Inc. — Canada & Nigeria Shipping" />
+  <meta name="twitter:description" content="Licensed air and ocean freighters shipping between Canada and Nigeria. Barrels, cars, electronics & more." />
+
+  <!-- Local Business Schema (helps Google show business info) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "Light Heritage Logistics Inc.",
+    "description": "Licensed air and ocean freighters offering sea cargo shipping, freight forwarding, warehousing and customs clearance between Canada and Nigeria.",
+    "url": "https://lightheritagelogistics.netlify.app",
+    "telephone": ["+16474691848", "+2348153675420"],
+    "email": "light.heritagelogistics@gmail.com",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "255 Moorlands Crescent",
+        "addressLocality": "Kitchener",
+        "addressRegion": "Ontario",
+        "postalCode": "N2P 0C4",
+        "addressCountry": "CA"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "17 Agidi Rd. Alapere, Ifodo Bus Stop, Ketu",
+        "addressLocality": "Lagos",
+        "addressCountry": "NG"
+      }
+    ],
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "areaServed": ["Canada", "Nigeria"],
+    "serviceType": ["Sea Cargo Shipping", "Air Freight", "Freight Forwarding", "Customs Clearance", "Warehousing"]
+  }
+  </script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -456,6 +508,50 @@
 
     footer span { color: var(--gold); }
 
+    /* ACCEPTING SHIPMENTS BANNER */
+    .shipments-banner {
+      background: linear-gradient(90deg, #e87c1e, #c0540a, #e87c1e);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+      color: var(--white);
+      text-align: center;
+      padding: 0.65rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .shipments-banner .pulse-dot {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .shipments-banner a {
+      color: var(--white);
+      text-decoration: underline;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
     /* RESPONSIVE */
     @media (max-width: 640px) {
       nav ul { display: none; }
@@ -475,6 +571,15 @@
     </svg>
     <span>Chat on WhatsApp</span>
   </a>
+
+  <!-- ACCEPTING SHIPMENTS BANNER -->
+  <div class="shipments-banner">
+    <span class="pulse-dot"></span>
+    &#x1F6A2; We Are Currently Accepting Shipments! — Canada &#x1F1E8;&#x1F1E6; &harr; Nigeria &#x1F1F3;&#x1F1EC;
+    &nbsp;|&nbsp;
+    <a href="#enquiry">Get a Free Quote &rarr;</a>
+    <span class="pulse-dot"></span>
+  </div>
 
   <!-- NAV -->
   <nav>
