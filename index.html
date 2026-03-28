@@ -706,11 +706,11 @@
     <p class="section-sub">Fill in the form below and we'll get back to you within 24 hours</p>
 
     <div class="form-wrapper">
-      <form action="https://formsubmit.co/light.heritagelogistics@gmail.com" method="POST" id="enquiryForm">
-        <input type="hidden" name="_subject" value="New Quote Enquiry - Light Heritage Logistics" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://lightheritagelogistics.netlify.app?sent=true" />
-        <input type="text" name="_honey" style="display:none" />
+      <form action="https://api.web3forms.com/submit" method="POST" id="enquiryForm">
+        <input type="hidden" name="access_key" value="dfb2cf44-0ff4-48b3-9425-37957649c7d9" />
+        <input type="hidden" name="subject" value="New Quote Enquiry - Light Heritage Logistics" />
+        <input type="hidden" name="from_name" value="Light Heritage Logistics Website" />
+        <input type="checkbox" name="botcheck" style="display:none" />
 
         <div class="form-grid">
           <div class="form-group">
@@ -891,15 +891,30 @@
   </footer>
 
   <script>
-    // Show success message if redirected back after form submission
     const form = document.getElementById('enquiryForm');
     const successMsg = document.getElementById('formSuccess');
 
-    if (window.location.search.includes('sent=true')) {
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
-      document.getElementById('enquiry').scrollIntoView({ behavior: 'smooth' });
-    }
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+          successMsg.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          alert('Something went wrong. Please try again or contact us directly on WhatsApp.');
+        }
+      })
+      .catch(() => {
+        alert('Something went wrong. Please try again or contact us directly on WhatsApp.');
+      });
+    });
   </script>
 
 </body>
